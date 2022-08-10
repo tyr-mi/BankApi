@@ -17,4 +17,5 @@ public interface IAccountService
     SPResult CreateAccount(CreateAccountDto createAccountDto);
     SPResult DeleteAccount(DeleteAccountDto deleteAccountDto);
     SPResult UpdateAccount(UpdateAccountDto updateAccountDto);
+    AccountBalanceDto GetAccountBalance(GetAccountDto getAccountDto);
 }

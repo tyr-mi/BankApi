@@ -71,4 +71,10 @@ public class AccountService : IAccountService
     {
         return _repository.UpdateAccount(updateAccountDto);
     }
+
+    public AccountBalanceDto GetAccountBalance(GetAccountDto getAccountDto)
+    {
+        var account = _repository.GetAccountById(getAccountDto);
+        return account.Adapt<AccountBalanceDto>();
+    }
 }

@@ -76,6 +76,12 @@ public class AccountController : ControllerBase
     {
         return Ok(_service.UpdateAccount(updateAccountDto));
     }
+
+    [HttpGet("balance/{Id}")]
+    public IActionResult GetAccountBalance([FromRoute] GetAccountDto getAccountDto)
+    {
+        return Ok(_service.GetAccountBalance(getAccountDto));
+    }
     
     
 }
